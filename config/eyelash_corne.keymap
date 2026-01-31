@@ -20,12 +20,16 @@
         td_mo2: td_mo2 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <175>;
             bindings = <&mo 2>, <&to 2>;
         };
 
         td_mo1: td_mo1 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <175>;
             bindings = <&mo 1>, <&to 1>;
         };
     };
