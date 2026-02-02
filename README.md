@@ -1,2 +1,2 @@
 # Eyelash Corne 
-![](keymap-drawer/eyelash-corne.svg)
+![](keymap-drawer/eyelash_corne.svg)
