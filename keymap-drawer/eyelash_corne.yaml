@@ -57,14 +57,14 @@ layers:
   - {t: '-', s: _}
   - +
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
-  - '|'
+  - Sft+\
   - _
   - {t: '=', s: +}
   - ':'
-  - '#'
+  - {t: \, s: '|'}
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: \, s: '|'}
+  - \
   - {t: '[', s: '{'}
   - (
   - '{'
@@ -76,14 +76,14 @@ layers:
   - '}'
   - )
   - {t: ']', s: '}'}
-  - '~'
+  - {t: Sft+\, s: Sft+|}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '"'
+  - Sft+2
   - $$mdi:volume-off$$
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - {t: '''', s: '"'}
