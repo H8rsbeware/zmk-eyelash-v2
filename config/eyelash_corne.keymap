@@ -68,8 +68,8 @@
             bindings = <
 &kp TAB       &kp Q  &kp W  &kp E    &kp R           &kp T                             &kp UP                &kp Y        &kp U          &kp I      &kp O    &kp P     &kp SQT
 &kp LEFT_WIN  &kp A  &kp S  &kp D    &kp F           &kp G                   &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J          &kp K      &kp L    &kp SEMI  &kp RALT
-&kp LCTRL     &kp Z  &kp X  &kp C    &kp V           &kp B      &kp SPACE              &kp DOWN              &kp N        &kp M          &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                            &kp TAB  &td_mo1         &space_shift LEFT_SHIFT SPACE                          &lt 0 ENTER  &lt 2 BACKSPACE  &td_mo2  &kp DEL 
+&kp LCTRL     &kp Z  &kp X    &kp C    &kp V           &kp B      &kp SPACE              &kp DOWN              &kp N        &kp M          &kp COMMA  &kp DOT    &kp FSLH  &kp ESC
+                            &kp TAB  &td_mo1         &space_shift LEFT_SHIFT SPACE                          &lt 0 ENTER  &lt 2 BACKSPACE  &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -92,7 +92,7 @@
             bindings = <
 &kp TAB  &kp NUMBER_1  &kp N2       &kp NUMBER_3   &kp NUMBER_4  &kp N5                                    &mmv MOVE_UP                     &kp NUMBER_6   &kp N7          &kp N8      &kp N9        &kp N0     &kp BSPC
 &trans   &kp HOME      &kp PAGE_UP  &kp PAGE_DOWN  &kp END       &kp DEL                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp BACKSPACE  &kp LEFT_ARROW  &kp DOWN    &kp UP_ARROW  &kp RIGHT  &bt BT_SEL 1
-&trans   &trans        &trans       &kp K_CUT      &kp K_COPY    &kp K_PASTE     &trans                    &mmv MOVE_DOWN                   &kp K_UNDO     &kp K_REDO      &kp K_LOCK  &trans        &trans     &bt BT_SEL 0
+&trans   &trans        &to 2       &kp K_CUT      &kp K_COPY    &kp K_PASTE     &trans                    &mmv MOVE_DOWN                   &kp K_UNDO     &kp K_REDO      &kp K_LOCK  &to 2         &trans     &bt BT_SEL 0
                                     &trans         &trans        &kp LEFT_SHIFT                                                             &kp LCTRL      &to 0           &trans
             >;
 
