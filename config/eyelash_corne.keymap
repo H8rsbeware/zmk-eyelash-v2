@@ -47,7 +47,7 @@
 &trans  &kp GRAVE             &kp SLASH         &kp ASTRK             &kp MINUS         &kp PLUS                                        &mmv MOVE_UP                     &kp LS(NON_US_BACKSLASH)  &kp UNDER         &kp EQUAL              &kp COLON          &kp BACKSLASH      &trans
 &trans  &kp NON_US_BACKSLASH  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp LEFT_BRACE    &kp LT                          &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp GT                    &kp RIGHT_BRACE   &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp LS(BACKSLASH)  &trans
 &trans  &kp LS(NUMBER_1)      &kp LS(SQT)       &kp LS(N5)            &kp LS(NUMBER_4)  &kp LS(NUMBER_2)  &kp C_MUTE                    &mmv MOVE_DOWN                   &kp SINGLE_QUOTE          &kp LS(NUMBER_3)  &kp LS(N7)             &kp LS(NUMBER_6)   &kp LS(SLASH)      &trans
-                                                &to 1                 &trans            &kp SPACE                                                                        &kp ENTER                 &trans            &trans
+                                                &to 0                 &trans            &kp SPACE                                                                        &kp ENTER                 &trans            &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -59,7 +59,7 @@
 &kp TAB  &kp NUMBER_1  &kp N2       &kp NUMBER_3   &kp NUMBER_4    &kp N5                               &mmv MOVE_UP                     &kp NUMBER_6   &kp N7          &kp N8    &kp N9        &kp N0     &kp BSPC
 &trans   &kp HOME      &kp PAGE_UP  &kp PAGE_DOWN  &kp END         &kp DEL              &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp BACKSPACE  &kp LEFT_ARROW  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &bt BT_SEL 1
 &trans   &trans        &trans       &trans         &kp LEFT_SHIFT  &kp LCTRL  &trans                    &mmv MOVE_DOWN                   &kp LCTRL      &kp LEFT_SHIFT  &trans    &trans        &trans     &bt BT_SEL 0
-                                    &trans         &trans          &kp SPACE                                                             &kp ENTER      &kp BACKSPACE   &to 2
+                                    &trans         &trans          &kp SPACE                                                             &kp ENTER      &kp BACKSPACE   &to 0
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -69,8 +69,8 @@
             bindings = <
 &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6                    &trans          &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
 &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans   &trans   &to 3
-                        &to 3   &trans  &trans                                    &trans  &trans  &to 3
+&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans   &trans   &to 0
+                        &to 0   &trans  &trans                                    &trans  &trans  &to 0
             >;
 
             label = "Function";
