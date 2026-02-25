@@ -9,6 +9,21 @@
 
 / {
     behaviors {
+        hrm: home_row_mod {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <125>;
+            bindings = <&kp>, <&kp>;
+        };
+
+        hrm_outer: home_row_mod_outer {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <140>;
+            bindings = <&kp>, <&kp>;
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -33,7 +48,7 @@
             display-name = "QWERTY";
             bindings = <
 &kp GRAVE  &kp Q       &kp W       &kp E        &kp R        &kp T                             &kp UP                &kp Y      &kp U          &kp I        &kp O       &kp P          &kp SQT
-&kp ESC    &mt LGUI A  &mt LALT S  &mt LSHFT D  &mt LCTRL F  &kp G                   &kp LEFT  &kp ENTER  &kp RIGHT  &kp H      &mt RCTRL J    &mt RSHFT K  &mt RALT L  &mt RGUI SEMI  &kp KP_COMMA
+&kp ESC    &hrm_outer LGUI A  &hrm LALT S  &hrm LSHFT D  &hrm LCTRL F  &kp G                   &kp LEFT  &kp ENTER  &kp RIGHT  &kp H      &hrm RCTRL J    &hrm RSHFT K  &hrm RALT L  &hrm_outer RGUI SEMI  &kp KP_COMMA
 &kp LCTRL  &kp Z       &kp X       &kp C        &kp V        &kp B      &kp SPACE              &kp DOWN              &kp N      &kp M          &kp COMMA    &kp DOT     &kp FSLH       &to 3
                                    &to 1        &kp TAB      &kp SPACE                                               &kp ENTER  &kp BACKSPACE  &to 2
             >;
