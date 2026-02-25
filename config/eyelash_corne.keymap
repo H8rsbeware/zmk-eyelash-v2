@@ -24,11 +24,6 @@
             bindings = <&soft_off>;
             key-positions = <1 15 29>;
         };
-
-        layer3_combo {
-            bindings = <&mo 3>;
-            key-positions = <42 47>;
-        };
     };
 
     keymap {
