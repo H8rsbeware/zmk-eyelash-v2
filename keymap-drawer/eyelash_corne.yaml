@@ -190,14 +190,12 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: Function, h: toggle}
-  - {t: Function, h: toggle, type: held}
+  - {t: Function, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: Function, h: toggle, type: held}
+  - {t: Function, h: toggle}
 combos:
 - p: [1, 15, 29]
   k: '&soft_off'
-- p: [42, 47]
-  k: Function
