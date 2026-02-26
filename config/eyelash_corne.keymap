@@ -2,6 +2,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/modifiers.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
@@ -9,20 +10,106 @@
 
 / {
     behaviors {
-        hrm: home_row_mod {
+        hrm_lalt: hrm_lalt {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
+            #binding-cells = <1>;
             flavor = "balanced";
-            tapping-term-ms = <125>;
-            bindings = <&kp>, <&kp>;
+            tapping-term-ms = <130>;
+            bindings = <&kp LALT>, <&kp>;
         };
 
-        hrm_outer: home_row_mod_outer {
+        hrm_lsft: hrm_lsft {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
+            #binding-cells = <1>;
+            flavor = "balanced";
+            tapping-term-ms = <130>;
+            bindings = <&kp LSHFT>, <&kp>;
+        };
+
+        hrm_lctl: hrm_lctl {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <1>;
+            flavor = "balanced";
+            tapping-term-ms = <130>;
+            bindings = <&kp LCTRL>, <&kp>;
+        };
+
+        hrm_rctl: hrm_rctl {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <1>;
+            flavor = "balanced";
+            tapping-term-ms = <130>;
+            bindings = <&kp RCTRL>, <&kp>;
+        };
+
+        hrm_rsft: hrm_rsft {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <1>;
+            flavor = "balanced";
+            tapping-term-ms = <130>;
+            bindings = <&kp RSHFT>, <&kp>;
+        };
+
+        hrm_ralt: hrm_ralt {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <1>;
+            flavor = "balanced";
+            tapping-term-ms = <130>;
+            bindings = <&kp RALT>, <&kp>;
+        };
+
+        hrm_lgui_outer: hrm_lgui_outer {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <1>;
             flavor = "balanced";
             tapping-term-ms = <140>;
-            bindings = <&kp>, <&kp>;
+            bindings = <&kp LGUI>, <&kp>;
+        };
+
+        hrm_rgui_outer: hrm_rgui_outer {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <1>;
+            flavor = "balanced";
+            tapping-term-ms = <140>;
+            bindings = <&kp RGUI>, <&kp>;
+        };
+
+        sym_hold_outer: sym_hold_outer {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <1>;
+            flavor = "balanced";
+            tapping-term-ms = <130>;
+            bindings = <&mo 1>, <&kp>;
+        };
+
+        to1_or_ctrl_tab: to1_or_ctrl_tab {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&to 1>, <&kp TAB>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+            keep-mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+        to2_or_rctrl_bspc_plain: to2_or_rctrl_bspc_plain {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&to 2>, <&kp BACKSPACE>;
+            mods = <(MOD_RCTL)>;
+        };
+
+        lctrl_then_rctrl_ctrl_bspc: lctrl_then_rctrl_ctrl_bspc {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSPACE>, <&kp BACKSPACE>;
+            mods = <(MOD_RCTL)>;
+            keep-mods = <(MOD_RCTL)>;
+        };
+
+        to2_ctrl_chord_bspc: to2_ctrl_chord_bspc {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&to2_or_rctrl_bspc_plain>, <&lctrl_then_rctrl_ctrl_bspc>;
+            mods = <(MOD_LCTL)>;
         };
     };
 
@@ -48,9 +135,9 @@
             display-name = "QWERTY";
             bindings = <
 &kp GRAVE  &kp Q       &kp W       &kp E        &kp R        &kp T                             &kp UP                &kp Y      &kp U          &kp I        &kp O       &kp P          &kp SQT
-&kp ESC    &hrm_outer LGUI A  &hrm LALT S  &hrm LSHFT D  &hrm LCTRL F  &kp G                   &kp LEFT  &kp ENTER  &kp RIGHT  &kp H      &hrm RCTRL J    &hrm RSHFT K  &hrm RALT L  &hrm_outer RGUI SEMI  &kp KP_COMMA
+&kp ESC    &hrm_lgui_outer A  &hrm_lalt S  &hrm_lsft D  &hrm_lctl F  &sym_hold_outer G      &kp LEFT  &kp ENTER  &kp RIGHT  &sym_hold_outer H  &hrm_rctl J    &hrm_rsft K  &hrm_ralt L  &hrm_rgui_outer SEMI  &kp KP_COMMA
 &kp LCTRL  &kp Z       &kp X       &kp C        &kp V        &kp B      &kp SPACE              &kp DOWN              &kp N      &kp M          &kp COMMA    &kp DOT     &kp FSLH       &to 3
-                                   &to 1        &kp TAB      &kp SPACE                                               &kp ENTER  &kp BACKSPACE  &to 2
+                                   &kp LEFT     &to1_or_ctrl_tab  &kp SPACE                                               &kp ENTER  &to2_ctrl_chord_bspc  &kp RIGHT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -60,9 +147,9 @@
             display-name = "Symbol";
             bindings = <
 &trans  &kp GRAVE             &kp SLASH         &kp ASTRK             &kp MINUS         &kp PLUS                                        &mmv MOVE_UP                     &kp LS(NON_US_BACKSLASH)  &kp UNDER         &kp EQUAL              &kp COLON          &kp BACKSLASH      &trans
-&trans  &kp NON_US_BACKSLASH  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp LEFT_BRACE    &kp LT                          &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp GT                    &kp RIGHT_BRACE   &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp LS(BACKSLASH)  &trans
+&trans  &hrm_lgui_outer NON_US_BACKSLASH  &hrm_lalt LEFT_BRACKET  &hrm_lsft LEFT_PARENTHESIS  &hrm_lctl LEFT_BRACE    &kp LT                          &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp GT                    &hrm_rctl RIGHT_BRACE   &hrm_rsft RIGHT_PARENTHESIS  &hrm_ralt RIGHT_BRACKET  &hrm_rgui_outer LS(BACKSLASH)  &trans
 &trans  &kp LS(NUMBER_1)      &kp LS(SQT)       &kp LS(N5)            &kp LS(NUMBER_4)  &kp LS(NUMBER_2)  &kp C_MUTE                    &mmv MOVE_DOWN                   &kp SINGLE_QUOTE          &kp LS(NUMBER_3)  &kp LS(N7)             &kp LS(NUMBER_6)   &kp LS(SLASH)      &trans
-                                                &to 0                 &trans            &kp SPACE                                                                        &kp ENTER                 &trans            &trans
+                                                &to 0                 &trans            &kp SPACE                                                                        &kp ENTER                 &trans            &to 0 
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -72,9 +159,9 @@
             display-name = "Edit";
             bindings = <
 &kp TAB  &kp NUMBER_1  &kp N2       &kp NUMBER_3   &kp NUMBER_4    &kp N5                               &mmv MOVE_UP                     &kp NUMBER_6   &kp N7          &kp N8    &kp N9        &kp N0     &kp BSPC
-&trans   &kp HOME      &kp PAGE_UP  &kp PAGE_DOWN  &kp END         &kp DEL              &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp BACKSPACE  &kp LEFT_ARROW  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &bt BT_SEL 1
+&trans   &hrm_lgui_outer HOME      &hrm_lalt PAGE_UP  &hrm_lsft PAGE_DOWN  &hrm_lctl END         &kp DEL              &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp BACKSPACE  &hrm_rctl LEFT_ARROW  &hrm_rsft DOWN  &hrm_ralt UP_ARROW  &hrm_rgui_outer RIGHT  &bt BT_SEL 1
 &trans   &trans        &trans       &trans         &kp LEFT_SHIFT  &kp LCTRL  &trans                    &mmv MOVE_DOWN                   &kp LCTRL      &kp LEFT_SHIFT  &trans    &trans        &trans     &bt BT_SEL 0
-                                    &trans         &trans          &kp SPACE                                                             &kp ENTER      &kp BACKSPACE   &to 0
+                                    &to 0          &trans          &kp SPACE                                                             &kp ENTER      &kp BACKSPACE   &to 0
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
