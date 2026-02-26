@@ -15,19 +15,19 @@ layers:
   - P
   - {t: '''', s: '"'}
   - $$mdi:keyboard-esc$$
-  - {t: A, h: LGUI}
-  - {t: S, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: D, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: F, h: '$$mdi:apple-keyboard-control$$'}
-  - G
+  - '&hrm_lgui_outer A'
+  - '&hrm_lalt S'
+  - '&hrm_lsft D'
+  - '&hrm_lctl F'
+  - '&sym_hold_outer G'
   - $$mdi:arrow-left-bold$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:arrow-right-bold$$
-  - H
-  - {t: J, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: K, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: L, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: ;, h: RGUI, s: ':'}
+  - '&sym_hold_outer H'
+  - '&hrm_rctl J'
+  - '&hrm_rsft K'
+  - '&hrm_ralt L'
+  - '&hrm_rgui_outer SEMI'
   - KP COMMA
   - $$mdi:apple-keyboard-control$$
   - Z
@@ -43,12 +43,12 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - {t: Function, h: toggle}
-  - {t: Symbol, h: toggle}
-  - $$mdi:keyboard-tab$$
+  - $$mdi:arrow-left-bold$$
+  - {t: Symbol, h: toggle, s: '$$mdi:keyboard-tab$$'}
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: Edit, h: toggle}
+  - {t: Edit, h: toggle, s: '$$mdi:backspace$$'}
+  - $$mdi:arrow-right-bold$$
   Symbol:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '`', s: '~'}
@@ -64,19 +64,19 @@ layers:
   - {t: \, s: '|'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - \
-  - {t: '[', s: '{'}
-  - (
-  - '{'
+  - '&hrm_lgui_outer NON_US_BACKSLASH'
+  - '&hrm_lalt LEFT_BRACKET'
+  - '&hrm_lsft LEFT_PARENTHESIS'
+  - '&hrm_lctl LEFT_BRACE'
   - <
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - '>'
-  - '}'
-  - )
-  - {t: ']', s: '}'}
-  - {t: Sft+\, s: Sft+|}
+  - '&hrm_rctl RIGHT_BRACE'
+  - '&hrm_rsft RIGHT_PARENTHESIS'
+  - '&hrm_ralt RIGHT_BRACKET'
+  - '&hrm_rgui_outer LS(BACKSLASH)'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - Sft+1
@@ -97,7 +97,7 @@ layers:
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: QWERTY, h: toggle}
   Edit:
   - $$mdi:keyboard-tab$$
   - '1'
@@ -113,19 +113,19 @@ layers:
   - {t: '0', s: )}
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:transfer$$', type: trans}
-  - HOME
-  - PgUp
-  - PgDn
-  - END
+  - '&hrm_lgui_outer HOME'
+  - '&hrm_lalt PAGE_UP'
+  - '&hrm_lsft PAGE_DOWN'
+  - '&hrm_lctl END'
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:backspace$$', type: backspace}
-  - $$mdi:arrow-left-bold$$
-  - $$mdi:arrow-down-bold$$
-  - $$mdi:arrow-up-bold$$
-  - $$mdi:arrow-right-bold$$
+  - '&hrm_rctl LEFT_ARROW'
+  - '&hrm_rsft DOWN'
+  - '&hrm_ralt UP_ARROW'
+  - '&hrm_rgui_outer RIGHT'
   - {h: '2', s: '$$mdi:bluetooth-connect$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -141,7 +141,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: QWERTY, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
