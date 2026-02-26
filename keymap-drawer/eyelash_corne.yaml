@@ -15,19 +15,19 @@ layers:
   - P
   - {t: '''', s: '"'}
   - $$mdi:keyboard-esc$$
-  - '&hrm_lgui_outer A'
-  - '&hrm_lalt S'
-  - '&hrm_lsft D'
-  - '&hrm_lctl F'
-  - '&sym_hold_outer G'
+  - {t: A, h: LGUI}
+  - {t: S, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: D, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: F, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: G, h: Symbol}
   - $$mdi:arrow-left-bold$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:arrow-right-bold$$
-  - '&sym_hold_outer H'
-  - '&hrm_rctl J'
-  - '&hrm_rsft K'
-  - '&hrm_ralt L'
-  - '&hrm_rgui_outer SEMI'
+  - {t: H, h: Symbol}
+  - {t: J, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: K, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: L, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: ;, h: RGUI, s: ':'}
   - KP COMMA
   - $$mdi:apple-keyboard-control$$
   - Z
@@ -64,19 +64,19 @@ layers:
   - {t: \, s: '|'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&hrm_lgui_outer NON_US_BACKSLASH'
-  - '&hrm_lalt LEFT_BRACKET'
-  - '&hrm_lsft LEFT_PARENTHESIS'
-  - '&hrm_lctl LEFT_BRACE'
-  - <
+  - {t: \, h: LGUI}
+  - {t: '[', h: '$$mdi:apple-keyboard-option$$', s: '{'}
+  - {t: (, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: '{', h: '$$mdi:apple-keyboard-control$$'}
+  - {t: <, type: held}
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
-  - '>'
-  - '&hrm_rctl RIGHT_BRACE'
-  - '&hrm_rsft RIGHT_PARENTHESIS'
-  - '&hrm_ralt RIGHT_BRACKET'
-  - '&hrm_rgui_outer LS(BACKSLASH)'
+  - {t: '>', type: held alternate}
+  - {t: '}', h: '$$mdi:apple-keyboard-control$$'}
+  - {t: ), h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: ']', h: '$$mdi:apple-keyboard-option$$', s: '}'}
+  - {t: Sft+\, h: RGUI, s: Sft+|}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - Sft+1
@@ -113,19 +113,19 @@ layers:
   - {t: '0', s: )}
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&hrm_lgui_outer HOME'
-  - '&hrm_lalt PAGE_UP'
-  - '&hrm_lsft PAGE_DOWN'
-  - '&hrm_lctl END'
+  - {t: HOME, h: LGUI}
+  - {t: PgUp, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: PgDn, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: END, h: '$$mdi:apple-keyboard-control$$'}
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:backspace$$', type: backspace}
-  - '&hrm_rctl LEFT_ARROW'
-  - '&hrm_rsft DOWN'
-  - '&hrm_ralt UP_ARROW'
-  - '&hrm_rgui_outer RIGHT'
+  - {t: '$$mdi:arrow-left-bold$$', h: '$$mdi:apple-keyboard-control$$'}
+  - {t: '$$mdi:arrow-down-bold$$', h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: '$$mdi:arrow-up-bold$$', h: '$$mdi:apple-keyboard-option$$'}
+  - {t: '$$mdi:arrow-right-bold$$', h: RGUI}
   - {h: '2', s: '$$mdi:bluetooth-connect$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
