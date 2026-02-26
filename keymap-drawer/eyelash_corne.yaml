@@ -44,7 +44,7 @@ layers:
   - {t: /, s: '?'}
   - {t: Function, h: toggle}
   - $$mdi:arrow-left-bold$$
-  - {t: Symbol, h: toggle, s: '$$mdi:keyboard-tab$$'}
+  - '&to1_or_ctrl_tab'
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: Edit, h: toggle, s: '$$mdi:backspace$$'}
@@ -92,12 +92,12 @@ layers:
   - Sft+6
   - {t: Sft+/, s: 'Sft+?'}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: QWERTY, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: QWERTY, h: toggle, s: '$$mdi:keyboard-tab$$'}
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: QWERTY, h: toggle, s: '$$mdi:backspace$$'}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: QWERTY, h: toggle}
   Edit:
   - $$mdi:keyboard-tab$$
   - '1'
@@ -141,12 +141,12 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
-  - {t: QWERTY, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: QWERTY, h: toggle, s: '$$mdi:keyboard-tab$$'}
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: QWERTY, h: toggle, s: '$$mdi:backspace$$'}
   - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: QWERTY, h: toggle}
   Function:
   - F1
   - F2
@@ -189,13 +189,13 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: QWERTY, h: toggle}
-  - {t: QWERTY, h: toggle}
+  - {t: QWERTY, h: toggle, s: '$$mdi:backspace$$'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: QWERTY, h: toggle, s: '$$mdi:keyboard-tab$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: QWERTY, h: toggle, s: '$$mdi:backspace$$'}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: QWERTY, h: toggle}
 combos:
 - p: [1, 15, 29]
   k: '&soft_off'
