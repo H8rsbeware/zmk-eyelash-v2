@@ -109,7 +109,7 @@
 &kp GRAVE  &kp Q       &kp W       &kp E        &kp R        &kp T                             &kp UP                &kp Y      &kp U          &kp I        &kp O       &kp P          &kp SQT
 &kp ESC    &hrm_outer LGUI A  &hrm LALT S  &hrm LSHFT D  &hrm LCTRL F  &sym_hold_outer 1 G      &kp LEFT  &kp ENTER  &kp RIGHT  &sym_hold_outer 1 H  &hrm RCTRL J    &hrm RSHFT K  &hrm RALT L  &hrm_outer RGUI SEMI  &kp KP_COMMA
 &kp LCTRL  &kp Z       &kp X       &kp C        &kp V        &kp B      &kp SPACE              &kp DOWN              &kp N      &kp M          &kp COMMA    &kp DOT     &kp FSLH       &to 3
-                                   &kp LEFT     &to1_or_ctrl_tab  &kp SPACE                                               &kp ENTER  &to2_ctrl_chord_bspc  &kp RIGHT
+                                   &kp LEFT     &to1_or_ctrl_tab_plain  &kp SPACE                                               &kp ENTER  &to2_ctrl_chord_bspc  &kp RIGHT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
