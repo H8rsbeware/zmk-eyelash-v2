@@ -10,76 +10,28 @@
 
 / {
     behaviors {
-        hrm_lalt: hrm_lalt {
+        hrm: hrm {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <1>;
+            #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <130>;
-            bindings = <&kp LALT>, <&kp>;
+            bindings = <&kp>, <&kp>;
         };
 
-        hrm_lsft: hrm_lsft {
+        hrm_outer: hrm_outer {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <1>;
-            flavor = "balanced";
-            tapping-term-ms = <130>;
-            bindings = <&kp LSHFT>, <&kp>;
-        };
-
-        hrm_lctl: hrm_lctl {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <1>;
-            flavor = "balanced";
-            tapping-term-ms = <130>;
-            bindings = <&kp LCTRL>, <&kp>;
-        };
-
-        hrm_rctl: hrm_rctl {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <1>;
-            flavor = "balanced";
-            tapping-term-ms = <130>;
-            bindings = <&kp RCTRL>, <&kp>;
-        };
-
-        hrm_rsft: hrm_rsft {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <1>;
-            flavor = "balanced";
-            tapping-term-ms = <130>;
-            bindings = <&kp RSHFT>, <&kp>;
-        };
-
-        hrm_ralt: hrm_ralt {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <1>;
-            flavor = "balanced";
-            tapping-term-ms = <130>;
-            bindings = <&kp RALT>, <&kp>;
-        };
-
-        hrm_lgui_outer: hrm_lgui_outer {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <1>;
+            #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <140>;
-            bindings = <&kp LGUI>, <&kp>;
-        };
-
-        hrm_rgui_outer: hrm_rgui_outer {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <1>;
-            flavor = "balanced";
-            tapping-term-ms = <140>;
-            bindings = <&kp RGUI>, <&kp>;
+            bindings = <&kp>, <&kp>;
         };
 
         sym_hold_outer: sym_hold_outer {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <1>;
+            #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <130>;
-            bindings = <&mo 1>, <&kp>;
+            tapping-term-ms = <140>;
+            bindings = <&mo>, <&kp>;
         };
 
         to1_or_ctrl_tab: to1_or_ctrl_tab {
@@ -135,7 +87,7 @@
             display-name = "QWERTY";
             bindings = <
 &kp GRAVE  &kp Q       &kp W       &kp E        &kp R        &kp T                             &kp UP                &kp Y      &kp U          &kp I        &kp O       &kp P          &kp SQT
-&kp ESC    &hrm_lgui_outer A  &hrm_lalt S  &hrm_lsft D  &hrm_lctl F  &sym_hold_outer G      &kp LEFT  &kp ENTER  &kp RIGHT  &sym_hold_outer H  &hrm_rctl J    &hrm_rsft K  &hrm_ralt L  &hrm_rgui_outer SEMI  &kp KP_COMMA
+&kp ESC    &hrm_outer LGUI A  &hrm LALT S  &hrm LSHFT D  &hrm LCTRL F  &sym_hold_outer 1 G      &kp LEFT  &kp ENTER  &kp RIGHT  &sym_hold_outer 1 H  &hrm RCTRL J    &hrm RSHFT K  &hrm RALT L  &hrm_outer RGUI SEMI  &kp KP_COMMA
 &kp LCTRL  &kp Z       &kp X       &kp C        &kp V        &kp B      &kp SPACE              &kp DOWN              &kp N      &kp M          &kp COMMA    &kp DOT     &kp FSLH       &to 3
                                    &kp LEFT     &to1_or_ctrl_tab  &kp SPACE                                               &kp ENTER  &to2_ctrl_chord_bspc  &kp RIGHT
             >;
@@ -147,7 +99,7 @@
             display-name = "Symbol";
             bindings = <
 &trans  &kp GRAVE             &kp SLASH         &kp ASTRK             &kp MINUS         &kp PLUS                                        &mmv MOVE_UP                     &kp LS(NON_US_BACKSLASH)  &kp UNDER         &kp EQUAL              &kp COLON          &kp BACKSLASH      &trans
-&trans  &hrm_lgui_outer NON_US_BACKSLASH  &hrm_lalt LEFT_BRACKET  &hrm_lsft LEFT_PARENTHESIS  &hrm_lctl LEFT_BRACE    &kp LT                          &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp GT                    &hrm_rctl RIGHT_BRACE   &hrm_rsft RIGHT_PARENTHESIS  &hrm_ralt RIGHT_BRACKET  &hrm_rgui_outer LS(BACKSLASH)  &trans
+&trans  &hrm_outer LGUI NON_US_BACKSLASH  &hrm LALT LEFT_BRACKET  &hrm LSHFT LEFT_PARENTHESIS  &hrm LCTRL LEFT_BRACE    &kp LT                          &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp GT                    &hrm RCTRL RIGHT_BRACE   &hrm RSHFT RIGHT_PARENTHESIS  &hrm RALT RIGHT_BRACKET  &hrm_outer RGUI LS(BACKSLASH)  &trans
 &trans  &kp LS(NUMBER_1)      &kp LS(SQT)       &kp LS(N5)            &kp LS(NUMBER_4)  &kp LS(NUMBER_2)  &kp C_MUTE                    &mmv MOVE_DOWN                   &kp SINGLE_QUOTE          &kp LS(NUMBER_3)  &kp LS(N7)             &kp LS(NUMBER_6)   &kp LS(SLASH)      &trans
                                                 &to 0                 &trans            &kp SPACE                                                                        &kp ENTER                 &trans            &to 0 
             >;
@@ -159,7 +111,7 @@
             display-name = "Edit";
             bindings = <
 &kp TAB  &kp NUMBER_1  &kp N2       &kp NUMBER_3   &kp NUMBER_4    &kp N5                               &mmv MOVE_UP                     &kp NUMBER_6   &kp N7          &kp N8    &kp N9        &kp N0     &kp BSPC
-&trans   &hrm_lgui_outer HOME      &hrm_lalt PAGE_UP  &hrm_lsft PAGE_DOWN  &hrm_lctl END         &kp DEL              &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp BACKSPACE  &hrm_rctl LEFT_ARROW  &hrm_rsft DOWN  &hrm_ralt UP_ARROW  &hrm_rgui_outer RIGHT  &bt BT_SEL 1
+&trans   &hrm_outer LGUI HOME      &hrm LALT PAGE_UP  &hrm LSHFT PAGE_DOWN  &hrm LCTRL END         &kp DEL              &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp BACKSPACE  &hrm RCTRL LEFT_ARROW  &hrm RSHFT DOWN  &hrm RALT UP_ARROW  &hrm_outer RGUI RIGHT  &bt BT_SEL 1
 &trans   &trans        &trans       &trans         &kp LEFT_SHIFT  &kp LCTRL  &trans                    &mmv MOVE_DOWN                   &kp LCTRL      &kp LEFT_SHIFT  &trans    &trans        &trans     &bt BT_SEL 0
                                     &to 0          &trans          &kp SPACE                                                             &kp ENTER      &kp BACKSPACE   &to 0
             >;
