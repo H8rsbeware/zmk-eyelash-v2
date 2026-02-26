@@ -44,7 +44,7 @@ layers:
   - {t: /, s: '?'}
   - {t: Function, h: toggle}
   - $$mdi:arrow-left-bold$$
-  - '&to1_or_ctrl_tab'
+  - {t: Symbol, h: toggle, s: '$$mdi:keyboard-tab$$'}
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: Edit, h: toggle, s: '$$mdi:backspace$$'}
