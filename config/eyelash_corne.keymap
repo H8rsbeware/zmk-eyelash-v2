@@ -34,12 +34,11 @@
             bindings = <&mo>, <&kp>;
         };
 
-        to1_or_ctrl_tab: to1_or_ctrl_tab {
+        to1_or_ctrl_tab_plain: to1_or_ctrl_tab_plain {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&to 1>, <&kp TAB>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
-            keep-mods = <(MOD_LCTL|MOD_RCTL)>;
         };
 
         to2_or_rctrl_bspc_plain: to2_or_rctrl_bspc_plain {
@@ -62,6 +61,27 @@
             #binding-cells = <0>;
             bindings = <&to2_or_rctrl_bspc_plain>, <&lctrl_then_rctrl_ctrl_bspc>;
             mods = <(MOD_LCTL)>;
+        };
+
+        to0_or_rctrl_bspc_plain: to0_or_rctrl_bspc_plain {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&to 0>, <&kp BACKSPACE>;
+            mods = <(MOD_RCTL)>;
+        };
+
+        to0_ctrl_chord_bspc: to0_ctrl_chord_bspc {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&to0_or_rctrl_bspc_plain>, <&lctrl_then_rctrl_ctrl_bspc>;
+            mods = <(MOD_LCTL)>;
+        };
+
+        to0_or_ctrl_tab_plain: to0_or_ctrl_tab_plain {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&to 0>, <&kp TAB>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
         };
     };
 
@@ -101,7 +121,7 @@
 &trans  &kp GRAVE             &kp SLASH         &kp ASTRK             &kp MINUS         &kp PLUS                                        &mmv MOVE_UP                     &kp LS(NON_US_BACKSLASH)  &kp UNDER         &kp EQUAL              &kp COLON          &kp BACKSLASH      &trans
 &trans  &hrm_outer LGUI NON_US_BACKSLASH  &hrm LALT LEFT_BRACKET  &hrm LSHFT LEFT_PARENTHESIS  &hrm LCTRL LEFT_BRACE    &kp LT                          &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp GT                    &hrm RCTRL RIGHT_BRACE   &hrm RSHFT RIGHT_PARENTHESIS  &hrm RALT RIGHT_BRACKET  &hrm_outer RGUI LS(BACKSLASH)  &trans
 &trans  &kp LS(NUMBER_1)      &kp LS(SQT)       &kp LS(N5)            &kp LS(NUMBER_4)  &kp LS(NUMBER_2)  &kp C_MUTE                    &mmv MOVE_DOWN                   &kp SINGLE_QUOTE          &kp LS(NUMBER_3)  &kp LS(N7)             &kp LS(NUMBER_6)   &kp LS(SLASH)      &trans
-                                                &to 0                 &trans            &kp SPACE                                                                        &kp ENTER                 &trans            &to 0 
+                                                  &trans    &to0_or_ctrl_tab_plain        &kp SPACE                                                                        &kp ENTER         &to0_ctrl_chord_bspc        &trans            
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -113,7 +133,7 @@
 &kp TAB  &kp NUMBER_1  &kp N2       &kp NUMBER_3   &kp NUMBER_4    &kp N5                               &mmv MOVE_UP                     &kp NUMBER_6   &kp N7          &kp N8    &kp N9        &kp N0     &kp BSPC
 &trans   &hrm_outer LGUI HOME      &hrm LALT PAGE_UP  &hrm LSHFT PAGE_DOWN  &hrm LCTRL END         &kp DEL              &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp BACKSPACE  &hrm RCTRL LEFT_ARROW  &hrm RSHFT DOWN  &hrm RALT UP_ARROW  &hrm_outer RGUI RIGHT  &bt BT_SEL 1
 &trans   &trans        &trans       &trans         &kp LEFT_SHIFT  &kp LCTRL  &trans                    &mmv MOVE_DOWN                   &kp LCTRL      &kp LEFT_SHIFT  &trans    &trans        &trans     &bt BT_SEL 0
-                                    &to 0          &trans          &kp SPACE                                                             &kp ENTER      &kp BACKSPACE   &to 0
+                                      &trans      &to0_or_ctrl_tab_plain    &kp SPACE                                                             &kp ENTER    &to0_ctrl_chord_bspc   &kp BACKSPACE   
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -123,8 +143,8 @@
             bindings = <
 &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6                    &trans          &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
 &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans   &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans   &trans   &to 0
-                        &to 0   &trans  &trans                                    &trans  &trans  &to 0
+&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans   &trans   &to0_ctrl_chord_bspc
+                           &trans &to0_or_ctrl_tab_plain &trans                                    &trans &to0_ctrl_chord_bspc &trans  
             >;
 
             label = "Function";
