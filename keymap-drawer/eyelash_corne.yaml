@@ -112,7 +112,7 @@ layers:
   - {t: '9', s: (}
   - {t: '0', s: )}
   - {h: '3', s: '$$mdi:bluetooth-connect$$'}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:bluetooth-off$$
   - {t: HOME, h: LGUI}
   - {t: PgUp, h: '$$mdi:apple-keyboard-option$$'}
   - {t: PgDn, h: '$$mdi:apple-keyboard-shift$$'}
