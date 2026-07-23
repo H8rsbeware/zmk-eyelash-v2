@@ -131,7 +131,7 @@
             display-name = "Edit";
             bindings = <
 &kp TAB  &kp NUMBER_1  &kp N2       &kp NUMBER_3   &kp NUMBER_4    &kp N5                               &mmv MOVE_UP                     &kp NUMBER_6   &kp N7          &kp N8    &kp N9        &kp N0     &bt BT_SEL 2
-&trans   &hrm_outer LGUI HOME      &hrm LALT PAGE_UP  &hrm LSHFT PAGE_DOWN  &hrm LCTRL END         &kp DEL              &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp BACKSPACE  &hrm RCTRL LEFT_ARROW  &hrm RSHFT DOWN  &hrm RALT UP_ARROW  &hrm_outer RGUI RIGHT  &bt BT_SEL 1
+&bt BT_CLR   &hrm_outer LGUI HOME      &hrm LALT PAGE_UP  &hrm LSHFT PAGE_DOWN  &hrm LCTRL END         &kp DEL              &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp BACKSPACE  &hrm RCTRL LEFT_ARROW  &hrm RSHFT DOWN  &hrm RALT UP_ARROW  &hrm_outer RGUI RIGHT  &bt BT_SEL 1
 &trans   &trans        &trans       &trans         &kp LEFT_SHIFT  &kp LCTRL  &trans                    &mmv MOVE_DOWN                   &kp LCTRL      &kp LEFT_SHIFT  &trans    &trans        &trans     &bt BT_SEL 0
                                       &trans      &to1_or_ctrl_tab_plain    &kp SPACE                                                             &kp ENTER    &to0_ctrl_chord_bspc   &kp BACKSPACE   
             >;
